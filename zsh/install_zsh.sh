@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 # Location of zsh, if installed via brew
-ZSH="/usr/local/bin/zsh"
+ZSH_SHELL="/usr/local/bin/zsh"
 # Known shells
 SHELLS="/etc/shells"
 # Current user
 USER=$(whoami)
+# Current user shell
+CURRENT_SHELL=$(dscl . -read ~/ UserShell | sed 's/UserShell: //')
 
 # Install zsh if not present
-if command -v ${ZSH} &> /dev/null
+if command -v ${ZSH_SHELL} &> /dev/null
 then
   echo "zsh already installed, cool."
 else
@@ -26,13 +28,15 @@ else
 fi
 
 # Set zsh as the shell for current user, if not set
-if [ $(echo $0) == ${ZSH} ]
+if [[ "${CURRENT_SHELL}" == "${ZSH_SHELL}" ]]
 then
   echo "zsh already set as shell for current user."
 else
   echo "Setting zsh as shell for curren user"
   sudo -s -- <<EOF
-    grep -q ${ZSH} ${SHELLS} || echo ${ZSH} >> ${SHELLS}
-    chsh -s ${ZSH} ${USER}
+    grep -q ${ZSH_SHELL} ${SHELLS} || echo ${ZSH_SHELL} >> ${SHELLS}
+    chsh -s ${ZSH_SHELL} ${USER}
 EOF
 fi
+
+echo "All set, bye!"

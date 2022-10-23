@@ -25,5 +25,5 @@ This setup is tailored to my own needs, so use at your own risk.
 brew bundle
 
 # Install oh-my-zsh
-./zsh/install_zsh.sh
+make zsh-install
 ----
