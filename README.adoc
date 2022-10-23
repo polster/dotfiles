@@ -1,1 +1,29 @@
 = dotfiles
+:toc:
+
+== Intro
+
+=== Description
+
+Contains `dotfile` configurations and scripts, used to setup my local base dev env.
+
+[NOTE]
+This setup is tailored to my own needs, so use at your own risk.
+
+=== Prerequisites
+
+* MacOS
+* link:https://brew.sh/[Home brew]
+
+== Get started
+
+* Git clone this repo and `cd` into it
+* Run the following commands:
+[source,bash]
+----
+# Install packages
+brew bundle
+
+# Install oh-my-zsh
+./zsh/install_zsh.sh
+----
