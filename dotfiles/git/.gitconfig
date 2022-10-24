@@ -1,0 +1,19 @@
+[alias]
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
+[core]
+  edit = vi
+	attributesfile = ~/.gitattributes
+	excludesfile = ~/.gitignore
+  ignorecase = false
+[push]
+	default = simple
+[fetch]
+	prune = true
+[pull]
+	rebase = false
+[init]
+	defaultBranch = develop
+[user]
+	name = Simon Dietschi
+	email = dietschi.simon@gmail.com

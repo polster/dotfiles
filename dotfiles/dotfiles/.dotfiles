@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Script to be sourced by shell specific rc file (e.g. .zshrc).
+
+for dot_file in $(find "$HOME/dotfiles" -type f 2> /dev/null)
+do
+  source "$dot_file"
+done
