@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# Script dir
+SCRIPT_DIR="$(dirname "$0")"
+
 # Location of zsh, if installed via brew
 ZSH_SHELL="/usr/local/bin/zsh"
 # Known shells
@@ -38,5 +41,8 @@ else
     chsh -s ${ZSH_SHELL} ${USER}
 EOF
 fi
+
+# Install custom configuration
+cp -R ${SCRIPT_DIR}/custom "${HOME}/.oh-my-zsh"
 
 echo "All set, bye!"
