@@ -27,12 +27,6 @@ source "$HOME/.dotfiles"
 # Custom bins
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
-# Use gnu-sed
-export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-
-# Home brew
-export HOMEBREW_EDITOR=code
-
 # Kubernetes
 alias k="~/bin/kubectl"
 
