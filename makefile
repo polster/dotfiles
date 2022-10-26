@@ -3,10 +3,14 @@
 DOTFILES_DIR := dotfiles
 TARGET_DIR := $(HOME)
 
-.PHONY: install-package-%
-install-package-%:
+.PHONY: package-install-%
+package-install-%:
 	./$*/install_$*.sh
 
-.PHONY: install-dotfiles
-install-dotfiles:
+.PHONY: dotfiles-install
+dotfiles-install:
 	@(cd $(DOTFILES_DIR) && exec stow -t $(TARGET_DIR) -S *)
+
+.PHONY: vscode-extensions-%
+vscode-extensions-%:
+	./vscode/vscode_extensions.sh $*

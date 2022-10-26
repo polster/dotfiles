@@ -25,11 +25,25 @@ This setup is tailored to my own needs, so use at your own risk.
 brew bundle
 
 # Install oh-my-zsh
-make install-package-zsh
+make package-install-zsh
 
 # Install sdkman
-make install-package-sdkman
+make package-install-sdkman
 
 # Install dotfiles
-make install-dotfiles
+make dotfiles-install
+----
+
+== Hints
+
+=== VSCode extensions
+
+To manage extensions in `VSCode`, the following commands are available:
+[source,bash]
+----
+# Install extensions
+make vscode-extensions-install
+
+# Dump from existing setup
+make vscode-extensions-dump
 ----
