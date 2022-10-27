@@ -25,7 +25,7 @@ ulimit -n 1024
 source "$HOME/.dotfiles"
 
 # Custom bins
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Direnv
 if [ -x "$(command -v direnv)" ]
