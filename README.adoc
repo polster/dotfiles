@@ -20,7 +20,7 @@ This setup is tailored to my own needs, so use at your own risk.
 * Git clone this repo and `cd` into it
 [source,bash]
 ----
-git clone git@github.com:polster/dotfiles.git $HOME/.dotfiles
+git clone git@github.com:polster/dotfiles.git $HOME/dotfiles
 ----
 * Run the following commands:
 [source,bash]

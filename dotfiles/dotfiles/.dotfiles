@@ -4,7 +4,7 @@
 #
 # If present, this script sources dotfile context defined in an .env file.
 
-for context_file in $(find "$HOME/.dotfiles/dotfiles" -type f -name '.env' 2> /dev/null)
+for context_file in $(find "$HOME/dotfiles" -type f -name '.env' 2> /dev/null)
 do
   source "$context_file"
 done
