@@ -27,9 +27,6 @@ source "$HOME/.dotfiles"
 # Custom bins
 export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
 
-# Kubernetes
-alias k="~/bin/kubectl"
-
 # Direnv
 if [ -x "$(command -v direnv)" ]
 then
