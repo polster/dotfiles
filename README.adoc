@@ -40,6 +40,15 @@ make dotfiles-install
 
 == Hints
 
+=== Command line tools
+
+Starting from scratch, or even after a MacOS version upgrade, it may happen that tools like `git` require installing the `command line tools`. This to be done easily with the following command:
+
+[source,bash]
+----
+xcode-select --install
+----
+
 === VSCode extensions
 
 To manage extensions in `VSCode`, the following commands are available:
