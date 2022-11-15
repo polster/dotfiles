@@ -1,0 +1,18 @@
+= Java base env
+
+== Get started
+
+To setup global or even project specific `JDK`s, `SDK`s and other common tools for Java development, this dotfiles setup includes link:https://sdkman.io/[sdkman].
+
+The bare minimum:
+
+[source,bash]
+----
+# Install current JVM
+sdk install java
+
+# Install latest maven
+sdk install maven
+----
+
+See the link:https://sdkman.io/usage[usage page] for more details.

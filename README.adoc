@@ -38,6 +38,12 @@ make package-install-sdkman
 make dotfiles-install
 ----
 
+== Base dev env
+
+Checkout the following instructions, depending on your needs:
+
+* link:docs/java_base_env.adoc[Java base env]
+
 == Hints
 
 === Command line tools
