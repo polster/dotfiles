@@ -66,3 +66,15 @@ make vscode-extensions-install
 # Dump from existing setup
 make vscode-extensions-dump
 ----
+
+=== Switching between apps like on Windows
+
+For those folks missing the way how to `ALT-Tab` between applications like on Windows, there is a tool for that :-)
+
+Installed automatically with this setup, comes link:https://alt-tab-macos.netlify.app/[alt-tab]. Once started, just hit `Option+Tab`.
+
+=== Advanced window manager
+
+Especially new people to MacOS are not comfortable with the OS functionality application windows can be arranged and resized. Also here, there is a tool for that: link:https://rectangleapp.com/[rectangle]
+
+Installed automatically with this setup, check their user documentation how to use it in detail.
