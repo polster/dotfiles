@@ -12,7 +12,7 @@ This setup is tailored to my own needs, so use at your own risk.
 
 === Prerequisites
 
-* MacOS
+* MacOS (Apple Silicon)
 * link:https://brew.sh/[Home brew]
 
 == Get started
@@ -78,3 +78,11 @@ Installed automatically with this setup, comes link:https://alt-tab-macos.netlif
 Especially new people to MacOS are not comfortable with the OS functionality application windows can be arranged and resized. Also here, there is a tool for that: link:https://rectangleapp.com/[rectangle]
 
 Installed automatically with this setup, check their user documentation how to use it in detail.
+
+=== Uninstall everything
+
+In case you need to remove everything installed by `brew`, the following one-liner will do the job (beware):
+[source,bash]
+---
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall.sh)"
+---

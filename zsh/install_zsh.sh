@@ -4,7 +4,7 @@
 SCRIPT_DIR="$(dirname "$0")"
 
 # Location of zsh, if installed via brew
-ZSH_SHELL="/usr/local/bin/zsh"
+ZSH_SHELL="/opt/homebrew/bin/zsh"
 # Known shells
 SHELLS="/etc/shells"
 # Current user
