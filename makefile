@@ -20,3 +20,7 @@ dotfiles-uninstall:
 .PHONY: vscode-extensions-%
 vscode-extensions-%:
 	./vscode/vscode_extensions.sh $*
+
+.PHONY: podman-docker-emulation-%
+podman-docker-emulation-%:
+	./podman/podman_emulation.sh $*

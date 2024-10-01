@@ -67,6 +67,24 @@ make vscode-extensions-install
 make vscode-extensions-dump
 ----
 
+=== Docker CLI emulation with Podman
+
+To maintain backward compatibility with familiar Docker commands, the following make commands are available:
+[source,bash]
+----
+# Install emulation
+make podman-docker-emulation-install
+
+# Remove emulation
+make podman-docker-emulation-remove
+----
+
+Validation:
+[source,bash]
+----
+docker run -it docker.io/hello-world
+----
+
 === Switching between apps like on Windows
 
 For those folks missing the way how to `ALT-Tab` between applications like on Windows, there is a tool for that :-)
