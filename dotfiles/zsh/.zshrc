@@ -39,3 +39,6 @@ then
     export SDKMAN_DIR="$HOME/.sdkman"
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
+
+# Added by Windsurf
+export PATH="/Users/badi@mediait.ch/.codeium/windsurf/bin:$PATH"
