@@ -1,9 +1,15 @@
 #!makefile
 
-DOTFILES_DIR := dotfiles
-TARGET_DIR := $(HOME)
-STOW_IGNORE := .env
-STOW_INCLUDE := *
+DOTFILES_DIR ?= $$(pwd)/dotfiles
+TARGET_DIR ?= ${HOME}
+STOW_IGNORE ?= .env
+STOW_INCLUDE ?= *
+
+STOW_CMD := stow \
+	--verbose \
+	--target $(TARGET_DIR) \
+	--stow $(STOW_INCLUDE) \
+	--ignore $(STOW_IGNORE)
 
 .PHONY: package-install-%
 package-install-%:
@@ -11,11 +17,12 @@ package-install-%:
 
 .PHONY: dotfiles-install
 dotfiles-install:
-	@(cd $(DOTFILES_DIR) && exec stow -t $(TARGET_DIR) -S $(STOW_INCLUDE) --ignore $(STOW_IGNORE))
+	@echo "In case of existing dotfiles, stow will try to adopt them. Use git to clean-up then."
+	@(cd $(DOTFILES_DIR) && exec $(STOW_CMD) --adopt)
 
 .PHONY: dotfiles-uninstall
 dotfiles-uninstall:
-	@(cd $(DOTFILES_DIR) && exec stow -t $(TARGET_DIR) -D $(STOW_INCLUDE))
+	@(cd $(DOTFILES_DIR) && exec $(STOW_CMD) -D)
 
 .PHONY: vscode-extensions-%
 vscode-extensions-%:
