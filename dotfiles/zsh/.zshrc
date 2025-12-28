@@ -40,5 +40,10 @@ then
     [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 fi
 
-# Added by Windsurf
-export PATH="/Users/badi@mediait.ch/.codeium/windsurf/bin:$PATH"
+# ruby
+if [ -d "$(brew --prefix)/opt/chruby" ]
+then
+    source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+    source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+    chruby ruby-3.4.7
+fi
