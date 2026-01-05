@@ -54,3 +54,9 @@ then
     source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
     chruby ruby-3.4.7
 fi
+
+# Podman
+if [ -x "$(command -v podman)" ]
+then
+    alias docker="podman"
+fi
