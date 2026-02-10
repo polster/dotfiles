@@ -60,3 +60,5 @@ if [ -x "$(command -v podman)" ]
 then
     alias docker="podman"
 fi
+
+. "$HOME/.local/bin/env"

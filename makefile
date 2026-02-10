@@ -31,3 +31,11 @@ vscode-extensions-%:
 .PHONY: podman-docker-emulation-%
 podman-docker-emulation-%:
 	./podman/podman_emulation.sh $*
+
+.PHONY: pre-commit-install
+pre-commit-install:
+	pre-commit install
+
+.PHONY: pre-commit-run
+pre-commit-run:
+	pre-commit run --all-files
