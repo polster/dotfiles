@@ -1,6 +1,7 @@
 tap "hashicorp/tap"
 tap "common-fate/granted"
 tap "slp/krunkit"
+tap "anomalyco/tap"
 brew "openjdk"
 brew "awscli"
 brew "aws-cdk"
