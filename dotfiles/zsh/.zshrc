@@ -61,4 +61,7 @@ then
     alias docker="podman"
 fi
 
+if [ -x "$HOME/.local/bin/env" ]
+then
 . "$HOME/.local/bin/env"
+fi
