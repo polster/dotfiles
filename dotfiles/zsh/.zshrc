@@ -61,4 +61,10 @@ then
     alias docker="podman"
 fi
 
+# Bifrost
+if [ -d "$HOME/.bifrost/bin" ]
+then
+    export PATH="$HOME/.bifrost/bin:$PATH"
+fi
+
 . "$HOME/.local/bin/env"
