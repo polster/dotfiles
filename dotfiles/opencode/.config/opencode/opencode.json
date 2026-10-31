@@ -1,0 +1,35 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "plan",
+  "permission": {
+    "bash": {
+      "*": "allow",
+      "bash -c *": "deny",
+      "sh -c *": "deny",
+      "dash -c *": "deny",
+
+      "rmdir *": "ask",
+      "mv *": "ask",
+      "find * -delete*": "deny",
+      "find * -exec rm *": "deny",
+      "rm -rf *": "deny",
+      "rm -r *": "deny",
+      "shred *": "deny",
+      "dd *": "deny",
+      "mkfs*": "deny",
+      "truncate *": "deny",
+
+      "curl *": "ask",
+      "wget *": "ask",
+      "nc *": "deny",
+      "netcat *": "deny",
+      "socat *": "deny"
+    },
+    "edit": "allow",
+    "read": "allow",
+    "webfetch": "deny",
+    "websearch": "deny",
+    "external_directory": { "*": "deny" },
+    "doom_loop": "deny"
+  }
+}
