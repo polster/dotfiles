@@ -24,8 +24,11 @@ ulimit -n 1024
 # Dotfiles
 source "$HOME/.dotfiles"
 
-# Custom bins
-export PATH=$HOME/bin:/opt/homebrew/bin:$PATH
+# homebrew
+if [ -d "/opt/homebrew/bin" ]
+then
+    export PATH=$HOME/bin:/opt/homebrew/bin:$PATH
+fi
 
 # Direnv
 if [ -x "$(command -v direnv)" ]
@@ -70,4 +73,10 @@ fi
 if [ -x "$HOME/.local/bin/env" ]
 then
     . "$HOME/.local/bin/env"
+fi
+
+# User bin
+if [ -x "$HOME/.local/bin/hermes" ]
+then
+    export PATH="$HOME/.local/bin:$PATH"
 fi
