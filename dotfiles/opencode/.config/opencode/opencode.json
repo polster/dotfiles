@@ -27,7 +27,7 @@
     },
     "edit": "allow",
     "read": "allow",
-    "webfetch": "deny",
+    "webfetch": "ask",
     "websearch": "deny",
     "external_directory": { "*": "deny" },
     "doom_loop": "deny"
