@@ -7,6 +7,7 @@ flobilosaurus.vscode-asciidoc-slides
 hashicorp.terraform
 hoovercj.haskell-linter
 hoovercj.vscode-ghc-mod
+jebbs.plantuml
 justusadam.language-haskell
 mathiasfrohlich.Kotlin
 mhutchie.git-graph

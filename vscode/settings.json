@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "afterDelay",
+    "workbench.startupEditor": "none",
+    "security.workspace.trust.untrustedFiles": "open",
+    "plantuml.render": "PlantUMLServer",
+    "plantuml.server": "http://localhost:39854"
+}

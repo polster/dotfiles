@@ -75,6 +75,35 @@ make vscode-extensions-install
 make vscode-extensions-dump
 ----
 
+=== VSCode settings
+
+Shared settings live in `vscode/settings.json`. Private settings (e.g. `github-enterprise.uris`) belong in
+`~/.config/vscode/settings.local.json`, which is not committed. Override the location with `VSCODE_LOCAL_SETTINGS`.
+Both files are merged with `jq`, local values taking precedence, and must be plain JSON (no comments).
+[source,bash]
+----
+# Write merged settings into VSCode (a .bak copy of the previous file is kept)
+make vscode-settings-install
+
+# Show differences between merged and current VSCode settings
+make vscode-settings-diff
+----
+
+Changes made via the VSCode UI are not synced back; copy them into the appropriate file.
+If VSCode Settings Sync is enabled, consider disabling settings sync to avoid conflicts.
+
+=== PlantUML server
+
+A local `plantuml-server:jetty` instance is available on `http://localhost:39854`, used by the `jebbs.plantuml` extension.
+[source,bash]
+----
+make vscode-compose-start
+make vscode-compose-stop
+make vscode-compose-restart
+make vscode-compose-status
+make vscode-compose-logs
+----
+
 === Docker CLI emulation with Podman
 
 To maintain backward compatibility with familiar Docker commands, the following make commands are available:

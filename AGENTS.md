@@ -36,6 +36,9 @@ suite. Use the following commands when relevant:
 - Install sdkman: `make package-install-sdkman`
 - VSCode extensions install: `make vscode-extensions-install`
 - VSCode extensions dump: `make vscode-extensions-dump`
+- VSCode settings install (merge base + local): `make vscode-settings-install`
+- VSCode settings diff: `make vscode-settings-diff`
+- PlantUML server: `make vscode-compose-start|stop|restart|status|logs`
 - Podman Docker emulation install: `make podman-docker-emulation-install`
 - Podman Docker emulation remove: `make podman-docker-emulation-remove`
 

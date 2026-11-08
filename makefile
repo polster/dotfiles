@@ -11,6 +11,8 @@ STOW_CMD := stow \
 	--stow $(STOW_INCLUDE) \
 	--ignore $(STOW_IGNORE)
 
+include vscode/makefile
+
 .PHONY: package-install-%
 package-install-%:
 	./$*/install_$*.sh
